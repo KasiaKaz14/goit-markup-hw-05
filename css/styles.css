@@ -73,7 +73,7 @@ body {
 .pages:hover,
 .pages:focus,
 .pages:active {
-  color: var(--secondary-font-color, #2196f3);
+  color: var(--secondary-font-color);
 }
 
 .navigation-list {
@@ -82,6 +82,10 @@ body {
   gap: 46px;
   margin: 0;
   padding: 0;
+}
+
+.navigation-list:active {
+  color: var(--secondary-font-color);
 }
 
 .contact-list {
@@ -541,4 +545,55 @@ address {
 .client-links:hover,
 .client-links:focus {
   color: var(--secondary-font-color);
+}
+
+.box {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transform: translateY(100%);
+  transition: transform 250ms ease;
+}
+
+.overlay-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  padding-top: 49px;
+  padding-bottom: 49px;
+  padding-left: 24px;
+  padding-right: 45px;
+}
+
+.box:hover .overlay {
+  transform: translateY(0);
+  background-color: rgba(33, 150, 243, 0.9);
+  color: var(--secondary-text-color);
+}
+
+.service {
+  position: relative;
+}
+
+.service-text {
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  bottom: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  color: var(--secondary-text-color);
+  padding: 27px 90px;
+  background-color: rgba(47, 48, 58, 0.8);
+  text-transform: uppercase;
 }
