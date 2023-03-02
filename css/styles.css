@@ -83,8 +83,14 @@ body {
   padding: 0;
 }
 
-.navigation-list:active {
-  color: var(--secondary-font-color);
+.primary-header::after .pages,
+.primary-header:hover .pages {
+  content: "";
+  width: 58px;
+  height: 4px;
+  border-top: 4px solid var(--background-button-color);
+  border-radius: 2px;
+  align-items: start;
 }
 
 .contact-list {
